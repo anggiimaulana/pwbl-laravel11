@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\homeController;
+use App\Http\Controllers\mahasiswaController;
 use App\Http\Controllers\mhsController;
+use App\Http\Controllers\prodiController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -11,7 +14,7 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/home', function () {
+Route::get('/beranda', function () {
     return "Yoooo whatsapp brooo!";
 });
 
@@ -58,5 +61,10 @@ Route::get('/start', function () {
 Route::get('/coba', action: function () {
     echo "<a href='".route('start')."'>Kembali</a>";
 })->name('coba');
+
+
+Route::get('/home', [homeController::class, 'index'])->name('home');
+Route::get('/mahasiswa', [mahasiswaController::class, 'index'])->name('mahasiswa');
+Route::get('/prodi', action: [prodiController::class, 'index'])->name('prodi');
 
 Route::get('/mhs', [mhsController::class, 'index'])->name('mhs');

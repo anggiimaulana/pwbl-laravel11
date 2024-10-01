@@ -1,0 +1,20 @@
+nav {
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 10px;
+    margin: 50px;
+    color: #000;
+}
+
+nav a:hover {
+    background-color: #ff0b0b;
+    color: #fff;
+}
+
+.container {
+    margin: 20px;
+}
