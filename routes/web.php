@@ -6,10 +6,6 @@ use App\Http\Controllers\mhsController;
 use App\Http\Controllers\prodiController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/about', function () {
     return view('about');
 });
@@ -68,3 +64,18 @@ Route::get('/mahasiswa', [mahasiswaController::class, 'index'])->name('mahasiswa
 Route::get('/prodi', action: [prodiController::class, 'index'])->name('prodi');
 
 Route::get('/mhs', [mhsController::class, 'index'])->name('mhs');
+Route::get('/mhs/show', [mhsController::class, 'show'])->name('mhs-show');
+
+Route::get('/', function() {
+    $title = "anggii.id";
+    $slug = "home";
+    $content = "Ini adalah konten anggii.id";
+    return view('/layouts/home', compact('title', 'slug', 'content'));
+});
+
+Route::get('/home', function() {
+    $title = "anggii.id";
+    $slug = "home";
+    $content = "Ini adalah konten anggii.id";
+    return view('/layouts/home', compact('title', 'slug', 'content'));
+});
