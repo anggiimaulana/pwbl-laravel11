@@ -14,6 +14,9 @@
     @include('layouts.nav')
     <div class="container">
         @yield('content')
+        @yield('data')
+        @yield('data_mhs')
+        @yield('mahasiswa')
     </div>
     <footer>
         @include('layouts.footer')
