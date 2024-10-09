@@ -1,13 +1,6 @@
-nav {
-    text-align: center;
-    padding: 10px;
-}
-
 nav a {
-    text-decoration: none;
+    font-size: 20px;
     padding: 10px;
-    margin: 50px;
-    color: #000;
 }
 
 nav a:hover {

@@ -8,11 +8,9 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class prodiTableSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
+        // Insert data ke dalam tabel prodi
         DB::table('prodi')->insert(array(
             [
                 'kode_prodi' => 'TI01',

@@ -8,13 +8,12 @@ use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     */
     public function run(): void
     {
         $this->call(mhsTableSeeder::class);
-        $this->call(prodiTableSeeder::class);
         $this->call(matkulMhs::class);
+
+        // Panggil seeder prodi
+        $this->call(prodiTableSeeder::class);
     }
 }

@@ -58,7 +58,7 @@ Route::get('/coba', action: function () {
     echo "<a href='".route('start')."'>Kembali</a>";
 })->name('coba');
 
-
+// Membuat route untuk masing-masing controller
 Route::get('/home', [homeController::class, 'index'])->name('home');
 Route::get('/mahasiswa', [mahasiswaController::class, 'index'])->name('mahasiswa');
 Route::get('/prodi', action: [prodiController::class, 'index'])->name('prodi');

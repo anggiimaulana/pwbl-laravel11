@@ -8,5 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class prodi extends Model
 {
     use HasFactory;
+    
+    // Menetapkan nama tabel yaitu prodi
     protected $table = 'prodi';
 }

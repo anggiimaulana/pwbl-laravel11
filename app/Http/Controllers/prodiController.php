@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class prodiController extends Controller
 {
+    // Mencari file mahasiswa pada folder view
     public function index() {
-        // return "<h1>Page > Prodi</h1>";
         return view('prodi');
     }
 }

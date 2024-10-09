@@ -6,11 +6,9 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
+        // Membuat skema tabel prodi
         Schema::create('prodi', function (Blueprint $table) {
             $table->id();
             $table->string('kode_prodi')->unique();
@@ -19,9 +17,6 @@ return new class extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('prodi');
