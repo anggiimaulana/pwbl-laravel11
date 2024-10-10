@@ -66,25 +66,28 @@ Route::get('/prodi', action: [prodiController::class, 'index'])->name('prodi');
 Route::get('/mhs', [mhsController::class, 'index'])->name('mhs');
 Route::get('/mhs/show', [mhsController::class, 'show'])->name('mhs-show');
 
+// Route Home
 Route::get('/', function() {
     $title = "anggii.id";
     $slug = "home";
     $content = "Ini adalah konten anggii.id";
-    return view('/layouts/home', compact('title', 'slug', 'content'));
+    return view('/content/home', compact('title', 'slug', 'content'));
 });
 
+// Route home
 Route::get('/home', function() {
     $title = "anggii.id";
     $slug = "home";
     $content = "Ini adalah konten anggii.id";
-    return view('/layouts/home', compact('title', 'slug', 'content'));
+    return view('/content/home', compact('title', 'slug', 'content'));
 });
 
+// Route untuk profil
 Route::get('/profil', function() {
     $title = "anggii.id";
     $slug = "profil";
     $data = ['nama' => 'Anggi Maulana', 'nim' => '2307059', 'kelas' => 'D4SIKC2C', 'prodi' => 'D4 Sistem Informasi Kota Cerdas'];
-    return view('/layouts/profil', compact('title', 'slug', 'data'));
+    return view('/content/profil', compact('title', 'slug', 'data'));
 });
 
 Route::get('/mahasiswa', function() {
@@ -100,24 +103,25 @@ Route::get('/mahasiswa', function() {
         ['nama' => 'Vanes Hasan', 'nim' => '2307081', 'kelas' => 'D4SIKC2C', 'asal-kota' => 'Yogyakarta']
     ];
 
-    return view('/layouts/mahasiswa', compact('title', 'slug', 'mahasiswa'));
+    return view('/content/mahasiswa', compact('title', 'slug', 'mahasiswa'));
 });
 
+// Membuat route untuk prodi
 Route::get('/prodi', function() {
     $title = "anggii.id";
     $slug = "prodi";
     
     // Array data prodi
     $prodi = [
-        ['nama_prodi' => 'Sistem Informasi Kota Cerdas', 'jenjang' => 'D4', 'jurusan' => 'Teknik Informatika'],
         ['nama_prodi' => 'Teknik Informatika', 'jenjang' => 'D3', 'jurusan' => 'Teknik Informatika'],
-        ['nama_prodi' => 'Rekayasa Perangkat Lunak', 'jenjang' => 'D4', 'jurusan' => 'Teknik Informatika'],
-        ['nama_prodi' => 'Keperawatan', 'jenjang' => 'D3', 'jurusan' => 'Kesehatan'],
         ['nama_prodi' => 'Teknik Mesin', 'jenjang' => 'D3', 'jurusan' => 'Teknik'],
+        ['nama_prodi' => 'Keperawatan', 'jenjang' => 'D3', 'jurusan' => 'Kesehatan'],
+        ['nama_prodi' => 'Rekayasa Perangkat Lunak', 'jenjang' => 'D4', 'jurusan' => 'Teknik Informatika'],
         ['nama_prodi' => 'Perancangan Manufaktur', 'jenjang' => 'D4', 'jurusan' => 'Teknik'],
         ['nama_prodi' => 'Teknik Pendingin dan Tata Udara', 'jenjang' => 'D3', 'jurusan' => 'Teknik'],
+        ['nama_prodi' => 'Sistem Informasi Kota Cerdas', 'jenjang' => 'D4', 'jurusan' => 'Teknik Informatika'],
         ['nama_prodi' => 'Teknologi Rekayasa Instrumentasi dan Kontrol', 'jenjang' => 'D4', 'jurusan' => 'Teknik'],
     ];
 
-    return view('/layouts/prodi', compact('title', 'slug', 'prodi'));
+    return view('/content/prodi', compact('title', 'slug', 'prodi'));
 });

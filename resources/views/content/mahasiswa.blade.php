@@ -1,19 +1,19 @@
-@extends('layouts.main')
-
+@extends('main')
 @section('title', $title)
-
 @section('data')
     <h1>Data Mahasiswa</h1>
+    {{-- Membuat table data 5 Mahasiswa --}}
     <table class="table table-striped">
         <thead>
             <tr>
-                <td>Nama</td>
-                <td>NIM</td>
-                <td>Kelas</td>
-                <td>Asal Kota</td>
+                <th>Nama</th>
+                <th>NIM</th>
+                <th>Kelas</th>
+                <th>Asal Kota</th>
             </tr>
         </thead>
         <tbody>
+            {{-- Melakukan looping data mahasiswa dari route --}}
             @foreach ($mahasiswa as $mhs)
                 <tr>
                     <td>{{ $mhs['nama'] }}</td>
