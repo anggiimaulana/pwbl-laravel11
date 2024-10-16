@@ -4,6 +4,8 @@ use App\Http\Controllers\homeController;
 use App\Http\Controllers\mahasiswaController;
 use App\Http\Controllers\mhsController;
 use App\Http\Controllers\prodiController;
+use App\Models\berita;
+use App\Models\prodi;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/about', function () {
@@ -67,12 +69,12 @@ Route::get('/mhs', [mhsController::class, 'index'])->name('mhs');
 Route::get('/mhs/show', [mhsController::class, 'show'])->name('mhs-show');
 
 // Route Home
-Route::get('/', function() {
-    $title = "anggii.id";
-    $slug = "home";
-    $content = "Ini adalah konten anggii.id";
-    return view('/content/home', compact('title', 'slug', 'content'));
-});
+// Route::get('/', function() {
+//     $title = "anggii.id";
+//     $slug = "home";
+//     $content = "Ini adalah konten anggii.id";
+//     return view('/content/home', compact('title', 'slug', 'content'));
+// });
 
 // Route home
 Route::get('/home', function() {
@@ -106,22 +108,40 @@ Route::get('/mahasiswa', function() {
     return view('/content/mahasiswa', compact('title', 'slug', 'mahasiswa'));
 });
 
-// Membuat route untuk prodi
+// Membuat route untuk prodi & isinya
+// Route::get('/prodi', function() {
+//     $title = "anggii.id";
+//     $slug = "prodi";
+    
+//     // Array data prodi
+//     $prodi = [
+//         ['nama_prodi' => 'Teknik Informatika', 'jenjang' => 'D3', 'jurusan' => 'Teknik Informatika'],
+//         ['nama_prodi' => 'Teknik Mesin', 'jenjang' => 'D3', 'jurusan' => 'Teknik'],
+//         ['nama_prodi' => 'Keperawatan', 'jenjang' => 'D3', 'jurusan' => 'Kesehatan'],
+//         ['nama_prodi' => 'Rekayasa Perangkat Lunak', 'jenjang' => 'D4', 'jurusan' => 'Teknik Informatika'],
+//         ['nama_prodi' => 'Perancangan Manufaktur', 'jenjang' => 'D4', 'jurusan' => 'Teknik'],
+//         ['nama_prodi' => 'Teknik Pendingin dan Tata Udara', 'jenjang' => 'D3', 'jurusan' => 'Teknik'],
+//         ['nama_prodi' => 'Sistem Informasi Kota Cerdas', 'jenjang' => 'D4', 'jurusan' => 'Teknik Informatika'],
+//         ['nama_prodi' => 'Teknologi Rekayasa Instrumentasi dan Kontrol', 'jenjang' => 'D4', 'jurusan' => 'Teknik'],
+//     ];
+
+//     return view('/content/prodi', compact('title', 'slug', 'prodi'));
+// });
+
+// menggunakan models
 Route::get('/prodi', function() {
     $title = "anggii.id";
     $slug = "prodi";
-    
-    // Array data prodi
-    $prodi = [
-        ['nama_prodi' => 'Teknik Informatika', 'jenjang' => 'D3', 'jurusan' => 'Teknik Informatika'],
-        ['nama_prodi' => 'Teknik Mesin', 'jenjang' => 'D3', 'jurusan' => 'Teknik'],
-        ['nama_prodi' => 'Keperawatan', 'jenjang' => 'D3', 'jurusan' => 'Kesehatan'],
-        ['nama_prodi' => 'Rekayasa Perangkat Lunak', 'jenjang' => 'D4', 'jurusan' => 'Teknik Informatika'],
-        ['nama_prodi' => 'Perancangan Manufaktur', 'jenjang' => 'D4', 'jurusan' => 'Teknik'],
-        ['nama_prodi' => 'Teknik Pendingin dan Tata Udara', 'jenjang' => 'D3', 'jurusan' => 'Teknik'],
-        ['nama_prodi' => 'Sistem Informasi Kota Cerdas', 'jenjang' => 'D4', 'jurusan' => 'Teknik Informatika'],
-        ['nama_prodi' => 'Teknologi Rekayasa Instrumentasi dan Kontrol', 'jenjang' => 'D4', 'jurusan' => 'Teknik'],
-    ];
 
+    $prodi = prodi::all();
     return view('/content/prodi', compact('title', 'slug', 'prodi'));
+});
+
+
+Route::get('/', function() {
+    $title = "anggii.id";
+    $slug = "home";
+
+    $berita = berita::all(); // Pastikan menggunakan model Berita
+    return view('content.home', compact('title', 'slug', 'berita'));
 });

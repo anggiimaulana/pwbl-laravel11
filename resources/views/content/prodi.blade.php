@@ -6,8 +6,8 @@
     <table class="table table-striped">
         <thead>
             <tr>
+                <th>Kode Prodi</th>
                 <th>Nama Program Studi</th>
-                <th>Jenjang</th>
                 <th>Jurusan</th>
             </tr>
         </thead>
@@ -15,8 +15,8 @@
             {{-- Melakukan looping data dari route --}}
             @foreach ($prodi as $p)
                 <tr>
+                    <td>{{ $p['kode_prodi'] }}</td>
                     <td>{{ $p['nama_prodi'] }}</td>
-                    <td>{{ $p['jenjang'] }}</td>
                     <td>{{ $p['jurusan'] }}</td>
                 </tr>
             @endforeach

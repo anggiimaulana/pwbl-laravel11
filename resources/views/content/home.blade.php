@@ -1,6 +1,8 @@
-{{-- Halaman home --}}
 @extends('main')
 @section('title', $title)
 @section('content')
-    <h1>{{ $content }}</h1>
+    @foreach ($berita as $p)
+        <h1>{{ $p->nama_berita }}</h1>
+        <p>{{ $p->content }}</p>
+    @endforeach
 @endsection

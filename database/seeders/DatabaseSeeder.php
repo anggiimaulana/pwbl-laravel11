@@ -10,10 +10,11 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        $this->call(mhsTableSeeder::class);
-        $this->call(matkulMhs::class);
+        // $this->call(mhsTableSeeder::class);
+        // $this->call(matkulMhs::class);
 
-        // Panggil seeder prodi
-        $this->call(prodiTableSeeder::class);
+        // // Panggil seeder prodi
+        // $this->call(prodiTableSeeder::class);
+        $this->call(berita::class);
     }
 }
