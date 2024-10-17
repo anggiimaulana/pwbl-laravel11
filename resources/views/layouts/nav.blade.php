@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
-        <a class="navbar-brand" href="#"><img src="{{ asset('assets/code.png') }}" width="40px" height="40px"
+        <a class="navbar-brand" href="/home"><img src="{{ asset('assets/code.png') }}" width="40px" height="40px"
             alt="" loading="lazy">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"

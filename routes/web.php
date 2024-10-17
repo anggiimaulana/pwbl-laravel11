@@ -138,7 +138,7 @@ Route::get('/prodi', function() {
 });
 
 
-Route::get('/', function() {
+Route::get('/home', function() {
     $title = "anggii.id";
     $slug = "home";
 
