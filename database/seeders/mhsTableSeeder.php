@@ -15,14 +15,14 @@ class mhsTableSeeder extends Seeder
     {
         DB::table('mahasiswa')->insert(array(
             [
-                'nim' => '2307070',
-                'nama' => 'Rafli',
+                'nim' => '2307060',
+                'nama' => 'Chairul',
                 'prodi' => 'SIKC',
                 'angkatan' => '2023'
             ],
             [
-                'nim' => '2307072',
-                'nama' => 'Malik',
+                'nim' => '2307012',
+                'nama' => 'Bayu',
                 'prodi' => 'SIKC',
                 'angkatan' => '2023'
             ],

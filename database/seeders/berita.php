@@ -15,16 +15,10 @@ class berita extends Seeder
     {
         DB::table('berita')->insert(array(
             [
-                'kode_berita' => 'SI43',
-                'slug' => 'timnas-hari-ini',
-                'nama_berita' => 'Timnas Hari Ini',
-                'content' => 'Hari ini, Timnas Indonesia baru saja mengalami kekalahan 1-2 melawan China dalam lanjutan putaran ketiga Kualifikasi Piala Dunia 2026 zona Asia. Pertandingan yang digelar di Qingdao, China, ini merupakan kekalahan perdana Indonesia dalam kualifikasi. Kekalahan ini membuat posisi Indonesia dalam grup semakin sulit, namun harapan untuk lolos ke Piala Dunia masih terbuka dengan sisa pertandingan. Setelah kekalahan ini, peringkat FIFA Timnas Indonesia turun ke posisi 130 dunia​'
-            ],
-            [
-                'kode_berita' => '1343',
-                'slug' => 'timnas-hari-kemaren',
-                'nama_berita' => 'Timnas Hari kemaren',
-                'content' => 'Hari ini, Timnas Indonesia baru saja mengalami kekalahan 1-2 melawan China dalam lanjutan putaran ketiga Kualifikasi Piala Dunia 2026 zona Asia. Pertandingan yang digelar di Qingdao, China, ini merupakan kekalahan perdana Indonesia dalam kualifikasi. Kekalahan ini membuat posisi Indonesia dalam grup semakin sulit, namun harapan untuk lolos ke Piala Dunia masih terbuka dengan sisa pertandingan. Setelah kekalahan ini, peringkat FIFA Timnas Indonesia turun ke posisi 130 dunia​'
+                'kode_berita' => '155',
+                'slug' => 'leo-messi',
+                'nama_berita' => 'Berkat Torehan Hattrick, Lionel Messi Kini Unggul 50 Gol Internasional dari Ronaldo',
+                'content' => 'Bermain di Estadio El Monumental, Rabu (16/10/2024) pagi WIB, Messi menorehkan hattrick dalam kemenangan 6-0 Argentina atas Bolivia. Gol pertama Messi tercipta ketika laga baru berjalan 19 menit. Gol itu berawal dari upaya Lautaro Martinez yang merebut bola dari kaki Marcelo Suarez di sisi kiri pertahanan Bolivia. Si kulit bulat lalu jatuh tepat di kaki Lionel Messi. Setelahnya, La Pulga berlari ke dalam kotak penalti dan melepaskan tembakan ke tiang dekat untuk menaklukkan kiper Guillermo Viscarra.​'
             ],
         ));
     }

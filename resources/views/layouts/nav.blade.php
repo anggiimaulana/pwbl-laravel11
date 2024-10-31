@@ -19,7 +19,7 @@
                         href="/profil">Profil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ $slug === 'mahasiswa' ? 'active' : '' }}" aria-current="page"
+                    <a class="nav-link {{ $slug === 'resmhs' ? 'active' : '' }}" aria-current="page"
                         href="/mahasiswa">Mahasiswa</a>
                 </li>
                 <li class="nav-item">
