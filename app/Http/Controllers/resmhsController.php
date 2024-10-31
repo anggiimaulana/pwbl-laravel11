@@ -9,6 +9,7 @@ class resmhsController extends Controller
 {
     public function index()
     {
+        // menampilkan data mahasiswa
         $mhs = "Anggi Maulana";
         $title = "Mahasiswa D4 Sistem Informasi Kota Cerdas";
         $slug = "mahasiswa";
@@ -28,7 +29,15 @@ class resmhsController extends Controller
      */
     public function create()
     {
-        //
+        // menambahkan data mahasiswa
+        DB::table('mahasiswa')->insert([
+            'nim' => 2307063,
+            'nama' => 'Dea Nanda Dwijayanti',
+            'prodi' => 'D4RPL',
+            'angkatan' => 2023
+        ]);
+
+        echo "data mahasiswa berhasil ditambahkan";
     }
 
     /**
@@ -76,27 +85,25 @@ class resmhsController extends Controller
         // return $id;
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(string $id)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
-        //
+        // update data mahasiswa
+        DB::table('mahasiswa')->where('nim', $id)->update([
+            'prodi' => $request->input('prodi', 'D4TRIK')
+        ]);
+
+        echo "Data mahasiswa berhasil diupdate";
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id)
     {
-        //
+        // hapus data mahasiswa
+        DB::table('mahasiswa')->where('nim', $id)->delete();
+        echo "Data mahasiswa berhasil dihapus";
     }
 }

@@ -1,27 +1,29 @@
+{{-- halaman profil --}}
 @extends('main')
 @section('title', $title)
 @section('data')
-    {{-- Menampilkan data diri saya --}}
     <h1>Profil Saya</h1>
     <table class="table table-striped">
+        @foreach ($data as $dataMhs)
         <tbody>
-            {{-- Melakukan looping data dari route --}}
+            {{-- Melakukan looping data dari controller & db --}}
             <tr>
                 <th>Nama</th>
-                <td>: {{ $data['nama'] }}</td>
+                <td>: {{ $dataMhs->nama }}</td>
             </tr>
             <tr>
                 <th>NIM</th>
-                <td>: {{ $data['nim'] }}</td>
-            </tr>
-            <tr>
-                <th>Kelas</th>
-                <td>: {{ $data['kelas'] }}</td>
+                <td>: {{ $dataMhs->nim }}</td>
             </tr>
             <tr>
                 <th>Prodi</th>
-                <td>: {{ $data['prodi'] }}</td>
+                <td>: {{ $dataMhs->prodi }}</td>
+            </tr>
+            <tr>
+                <th>Alamat</th>
+                <td>: {{ $dataMhs->alamat }}</td>
             </tr>
         </tbody>
+        @endforeach
     </table>
 @endsection
