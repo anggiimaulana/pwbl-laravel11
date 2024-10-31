@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class resmhsController extends Controller
 {
@@ -11,8 +12,15 @@ class resmhsController extends Controller
         $mhs = "Anggi Maulana";
         $title = "Mahasiswa D4 Sistem Informasi Kota Cerdas";
         $slug = "mahasiswa";
-        $dataMhs = $this->show();
-        return view('controller.mahasiswa', compact('mhs', 'title', 'slug', 'dataMhs'));
+        $dataMhs = DB::table('mahasiswa')->get();
+        return view('content.mahasiswa', compact('mhs', 'title', 'slug', 'dataMhs'));
+
+        // // controller resmhs
+        // $mhs = "Anggi Maulana";
+        // $title = "Mahasiswa D4 Sistem Informasi Kota Cerdas";
+        // $slug = "mahasiswa";
+        // $dataMhs = $this->show();
+        // return view('controller.mahasiswa', compact('mhs', 'title', 'slug', 'dataMhs'));
     }
 
     /**
@@ -36,35 +44,36 @@ class resmhsController extends Controller
      */
     public function show(string $id = "")
     {
-        $id = array(
-            [
-                'nim' => '2307059',
-                'nama' => 'Anggi Maulana',
-                'prodi' => 'D4 Sistem Informasi Kota Cerdas',
-            ],
-            [
-                'nim' => '2307061',
-                'nama' => 'Bayu Rokhmatullah',
-                'prodi' => 'D4 Sistem Informasi Kota Cerdas',
-            ],
-            [
-                'nim' => '2307065',
-                'nama' => 'Erwan Kurniawan',
-                'prodi' => 'D4 Sistem Informasi Kota Cerdas',
-            ],
-            [
-                'nim' => '2307072',
-                'nama' => 'Malik',
-                'prodi' => 'D4 Sistem Informasi Kota Cerdas',
-            ],
-            [
-                'nim' => '2307071',
-                'nama' => 'Abiyi',
-                'prodi' => 'D4 Sistem Informasi Kota Cerdas',
-            ],
-        );
+        // data mahasiswa
+        // $id = array(
+        //     [
+        //         'nim' => '2307059',
+        //         'nama' => 'Anggi Maulana',
+        //         'prodi' => 'D4 Sistem Informasi Kota Cerdas',
+        //     ],
+        //     [
+        //         'nim' => '2307061',
+        //         'nama' => 'Bayu Rokhmatullah',
+        //         'prodi' => 'D4 Sistem Informasi Kota Cerdas',
+        //     ],
+        //     [
+        //         'nim' => '2307065',
+        //         'nama' => 'Erwan Kurniawan',
+        //         'prodi' => 'D4 Sistem Informasi Kota Cerdas',
+        //     ],
+        //     [
+        //         'nim' => '2307072',
+        //         'nama' => 'Malik',
+        //         'prodi' => 'D4 Sistem Informasi Kota Cerdas',
+        //     ],
+        //     [
+        //         'nim' => '2307071',
+        //         'nama' => 'Abiyi',
+        //         'prodi' => 'D4 Sistem Informasi Kota Cerdas',
+        //     ],
+        // );
 
-        return $id;
+        // return $id;
     }
 
     /**

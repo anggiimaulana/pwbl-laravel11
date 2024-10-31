@@ -1,18 +1,19 @@
+{{-- halaman daftar mahasiswa --}}
 @extends('main')
 @section('title', $title)
 @section('data')
     <h1>Resource Mahasiswa: {{ $mhs }}</h1>
-    {{-- Membuat table data 5 Mahasiswa --}}
+    {{-- data table data 5 Mahasiswa --}}
     <table class="table table-striped">
         <thead>
             <tr>
                 <th>NIM</th>
                 <th>Nama</th>
-                <th>Kelas</th>
+                <th>Prodi</th>
             </tr>
         </thead>
         <tbody>
-            {{-- Melakukan looping data mahasiswa dari route --}}
+            {{-- Melakukan looping data mahasiswa dari controller --}}
             @foreach ($dataMhs as $mhs)
                 <tr>
                     <td>{{ $mhs['nim'] }}</td>

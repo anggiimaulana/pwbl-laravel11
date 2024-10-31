@@ -1,3 +1,4 @@
+{{-- halaman daftar prodi --}}
 @extends('main')
 @section('title', $title)
 @section('data')
@@ -12,7 +13,7 @@
             </tr>
         </thead>
         <tbody>
-            {{-- Melakukan looping data dari route --}}
+            {{-- Melakukan looping data dari controller --}}
             @foreach ($prodi as $p)
                 <tr>
                     <td>{{ $p['nama_prodi'] }}</td>

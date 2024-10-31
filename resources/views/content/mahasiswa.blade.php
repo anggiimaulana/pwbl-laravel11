@@ -1,25 +1,25 @@
 @extends('main')
 @section('title', $title)
 @section('data')
-    <h1>Data Mahasiswa</h1>
+    <h1>Resource Mahasiswa: {{ $mhs }}</h1>
     {{-- Membuat table data 5 Mahasiswa --}}
     <table class="table table-striped">
         <thead>
             <tr>
                 <th>Nama</th>
                 <th>NIM</th>
-                <th>Kelas</th>
-                <th>Asal Kota</th>
+                <th>Prodi</th>
+                <th>Angkatan</th>
             </tr>
         </thead>
         <tbody>
             {{-- Melakukan looping data mahasiswa dari route --}}
-            @foreach ($mahasiswa as $mhs)
+            @foreach ($dataMhs as $data)
                 <tr>
-                    <td>{{ $mhs['nama'] }}</td>
-                    <td>{{ $mhs['nim'] }}</td>
-                    <td>{{ $mhs['kelas'] }}</td>
-                    <td>{{ $mhs['asal-kota'] }}</td>
+                    <td>{{ $data->nama }}</td>
+                    <td>{{ $data->nim }}</td>
+                    <td>{{ $data->prodi }}</td>
+                    <td>{{ $data->angkatan }}</td>
                 </tr>
             @endforeach
         </tbody>

@@ -150,8 +150,9 @@ Route::get('/home', function() {
     return view('content.home', compact('title', 'slug', 'berita'));
 });
 
-Route::get('/mahasiswa', [mahasiswa::class, 'index']);
+// Route::get('/mahasiswa', [mahasiswa::class, 'index']);
 
-Route::resource('/resmhs', resmhsController::class);
+// tugas controller
+Route::resource('/mahasiswa', resmhsController::class);
 Route::resource('/prodi', prodi::class);
 Route::resource('/profil', profil::class);

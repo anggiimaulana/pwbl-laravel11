@@ -1,3 +1,4 @@
+{{-- halaman profil saya --}}
 @extends('main')
 @section('title', $title)
 @section('data')
@@ -5,7 +6,7 @@
     <h1>Profil Saya</h1>
     <table class="table table-striped">
         <tbody>
-            {{-- Melakukan looping data dari route --}}
+            {{-- Melakukan looping data dari controller --}}
             @foreach ($data as $mhs)
             <tr>
                 <th>Nama</th>

@@ -1,3 +1,4 @@
+{{-- Navbar halaman --}}
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
         <a class="navbar-brand" href="/home"><img src="{{ asset('assets/code.png') }}" width="40px" height="40px"
@@ -8,7 +9,6 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            {{-- Navbar halaman --}}
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link {{ $slug === 'home' ? 'active' : '' }}" aria-current="page"
@@ -19,7 +19,7 @@
                         href="/profil">Profil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ $slug === 'resmhs' ? 'active' : '' }}" aria-current="page"
+                    <a class="nav-link {{ $slug === 'mahasiswa' ? 'active' : '' }}" aria-current="page"
                         href="/mahasiswa">Mahasiswa</a>
                 </li>
                 <li class="nav-item">

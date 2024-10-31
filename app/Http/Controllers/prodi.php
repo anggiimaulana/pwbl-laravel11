@@ -6,9 +6,7 @@ use Illuminate\Http\Request;
 
 class prodi extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    // controller prodi
     public function index()
     {
         $mhs = "Anggi Maulana";
@@ -40,6 +38,7 @@ class prodi extends Controller
      */
     public function show(string $prodi = "")
     {
+        // data prodi
         $prodi = array(
             ['nama_prodi' => 'Teknik Informatika', 'jenjang' => 'D3', 'jurusan' => 'Teknik Informatika'],
             ['nama_prodi' => 'Teknik Mesin', 'jenjang' => 'D3', 'jurusan' => 'Teknik'],
