@@ -157,6 +157,15 @@ Route::resource('/mahasiswa', resmhsController::class);
 Route::resource('/prodi', prodi::class);
 Route::resource('/profil', profil::class);
 
+// Route home
+Route::get('/home', function() {
+    $title = "anggii.id";
+    $slug = "home";
+
+    $berita = berita::all(); 
+    return view('content.home', compact('title', 'slug', 'berita'));
+});
+
 // Route untuk CRUD data mahasiswa
 Route::get('mahasiswa/create', [resmhsController::class, 'create']);
 Route::get('mahasiswa/update/{id}', [resmhsController::class, 'update']);

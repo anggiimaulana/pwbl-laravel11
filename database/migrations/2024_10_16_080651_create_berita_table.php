@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('berita', function (Blueprint $table) {
             $table->id();
             $table->string('kode_berita')->unique();
-            $table->integer('slug');
+            $table->string('slug');
             $table->string('nama_berita');
             $table->string('content');
         });
