@@ -152,10 +152,10 @@ Route::get('/home', function() {
 
 // Route::get('/mahasiswa', [mahasiswa::class, 'index']);
 
-// controller
-Route::resource('/mahasiswa', resmhsController::class);
-Route::resource('/prodi', prodi::class);
-Route::resource('/profil', profil::class);
+// // controller
+// Route::resource('/mahasiswa', resmhsController::class);
+// Route::resource('/prodi', prodi::class);
+// Route::resource('/profil', profil::class);
 
 // Route home
 Route::get('/home', function() {
@@ -166,17 +166,23 @@ Route::get('/home', function() {
     return view('content.home', compact('title', 'slug', 'berita'));
 });
 
-// Route untuk CRUD data mahasiswa
-Route::get('mahasiswa/create', [resmhsController::class, 'create']);
-Route::get('mahasiswa/update/{id}', [resmhsController::class, 'update']);
-Route::get('mahasiswa/destroy/{id}', [resmhsController::class, 'destroy']);
+// // Route untuk CRUD data mahasiswa
+// Route::get('mahasiswa/create', [resmhsController::class, 'create']);
+// Route::get('mahasiswa/update/{id}', [resmhsController::class, 'update']);
+// Route::get('mahasiswa/destroy/{id}', [resmhsController::class, 'destroy']);
 
-// Route untuk CRUD data prodi
-Route::get('prodi/create', [prodi::class, 'create']);
-Route::get('prodi/update/{id}', [prodi::class, 'update']);
-Route::get('prodi/destroy/{id}', [prodi::class, 'destroy']);
+// // Route untuk CRUD data prodi
+// Route::get('prodi/create', [prodi::class, 'create']);
+// Route::get('prodi/update/{id}', [prodi::class, 'update']);
+// Route::get('prodi/destroy/{id}', [prodi::class, 'destroy']);
 
-// Route untuk CRUD data profil
-Route::get('profil/create', [profil::class, 'create']);
-Route::get('profil/update/{id}', [profil::class, 'update']);
-Route::get('profil/destroy/{id}', [profil::class, 'destroy']);
+// // Route untuk CRUD data profil
+// Route::get('profil/create', [profil::class, 'create']);
+// Route::get('profil/update/{id}', [profil::class, 'update']);
+// Route::get('profil/destroy/{id}', [profil::class, 'destroy']);
+
+// Route prodiController
+Route::get('/prodi', [prodiController::class, 'index']);
+Route::get('/prodi/create', [prodiController::class, 'create']);
+Route::get('/prodi/update', [prodiController::class, 'update']);
+Route::get('/prodi/destroy', [prodiController::class, 'destroy']);

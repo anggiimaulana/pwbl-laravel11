@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('nama');
             $table->string('prodi');
             $table->year('angkatan');
+            $table->dateTime('created_at');
+            $table->dateTime('updated_at');
         });
     }
 

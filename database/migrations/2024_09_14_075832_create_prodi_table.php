@@ -14,6 +14,8 @@ return new class extends Migration
             $table->string('kode_prodi')->unique();
             $table->string('nama_prodi');
             $table->string('jurusan');
+            $table->dateTime('created_at');
+            $table->dateTime('updated_at');
         });
     }
 
