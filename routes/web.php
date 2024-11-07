@@ -186,3 +186,9 @@ Route::get('/prodi', [prodiController::class, 'index']);
 Route::get('/prodi/create', [prodiController::class, 'create']);
 Route::get('/prodi/update', [prodiController::class, 'update']);
 Route::get('/prodi/destroy', [prodiController::class, 'destroy']);
+
+// Route mahasiswaController
+Route::get('/mahasiswa', [mahasiswaController::class, 'index']);
+Route::get('/mahasiswa/create', [mahasiswaController::class, 'create']);
+Route::get('/mahasiswa/update', [mahasiswaController::class, 'update']);
+Route::get('/mahasiswa/destroy', [mahasiswaController::class, 'destroy']);
