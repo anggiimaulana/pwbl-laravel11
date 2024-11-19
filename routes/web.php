@@ -171,21 +171,23 @@ Route::get('/home', function() {
 // Route::get('mahasiswa/update/{id}', [resmhsController::class, 'update']);
 // Route::get('mahasiswa/destroy/{id}', [resmhsController::class, 'destroy']);
 
-// // Route untuk CRUD data prodi
-// Route::get('prodi/create', [prodi::class, 'create']);
-// Route::get('prodi/update/{id}', [prodi::class, 'update']);
-// Route::get('prodi/destroy/{id}', [prodi::class, 'destroy']);
+// Route untuk CRUD data prodi
+Route::get('/prodi', [prodi::class, 'index']);
+Route::get('prodi/create', [prodi::class, 'create']);
+Route::get('prodi/update/{id}', [prodi::class, 'update']);
+Route::get('prodi/destroy/{id}', [prodi::class, 'destroy']);
 
-// // Route untuk CRUD data profil
-// Route::get('profil/create', [profil::class, 'create']);
-// Route::get('profil/update/{id}', [profil::class, 'update']);
-// Route::get('profil/destroy/{id}', [profil::class, 'destroy']);
+// Route untuk CRUD data profil
+Route::get('profil', [profil::class, 'index']);
+Route::get('profil/create', [profil::class, 'create']);
+Route::get('profil/update/{id}', [profil::class, 'update']);
+Route::get('profil/destroy/{id}', [profil::class, 'destroy']);
 
 // Route prodiController
-Route::get('/prodi', [prodiController::class, 'index']);
-Route::get('/prodi/create', [prodiController::class, 'create']);
-Route::get('/prodi/update', [prodiController::class, 'update']);
-Route::get('/prodi/destroy', [prodiController::class, 'destroy']);
+// Route::get('/prodi', [prodiController::class, 'index']);
+// Route::get('/prodi/create', [prodiController::class, 'create']);
+// Route::get('/prodi/update', [prodiController::class, 'update']);
+// Route::get('/prodi/destroy', [prodiController::class, 'destroy']);
 
 // Route mahasiswaController
 Route::get('/mahasiswa', [mahasiswaController::class, 'index']);

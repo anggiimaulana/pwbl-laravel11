@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('nim')->unique();
             $table->string('prodi');
             $table->string('alamat');
+            $table->dateTime('created_at');
+            $table->dateTime('updated_at');
         });
     }
 

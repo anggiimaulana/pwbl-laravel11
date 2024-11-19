@@ -30,9 +30,9 @@ class prodi extends Controller
     public function create()
     {
         // menambahkan data prodi tugas 10
-        // DB::table('prodi')->insert(
-        //     ['kode_prodi' => 'D4RJK', 'nama_prodi' => 'D4 Rekayasa Jaringan Komputer', 'jurusan' => 'Teknik Informatika']
-        // );
+        DB::table('prodi')->insert(
+            ['kode_prodi' => 'D4RJK', 'nama_prodi' => 'D4 Rekayasa Jaringan Komputer', 'jurusan' => 'Teknik Informatika']
+        );
 
         echo "Data prodi berhasil ditambahkan";
     }
@@ -69,7 +69,7 @@ class prodi extends Controller
     {
         // update data prodi
         DB::table('prodi')->where('kode_prodi', $id)->update([
-            'jurusan' => $request->input('jurusan', 'Ilmu Komputer')
+            'jurusan' => $request->input('jurusan', 'Ilmu Gacoan')
         ]);
 
         echo "Data prodi berhasil diupdate";

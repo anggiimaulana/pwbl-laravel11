@@ -14,11 +14,11 @@
         </thead>
         <tbody>
             {{-- Melakukan looping data dari controller & db --}}
-            @foreach ($dataProdi as $prodi)
+            @foreach ($prodi as $prod)
                 <tr>
-                    <td>{{ $prodi->kode_prodi }}</td>
-                    <td>{{ $prodi->nama_prodi }}</td>
-                    <td>{{ $prodi->jurusan }}</td>
+                    <td>{{ $prod->kode_prodi }}</td>
+                    <td>{{ $prod->nama_prodi }}</td>
+                    <td>{{ $prod->jurusan }}</td>
                 </tr>
             @endforeach
         </tbody>

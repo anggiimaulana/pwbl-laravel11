@@ -18,8 +18,8 @@ class mahasiswaController extends Controller
 
     public function create() {
         $dataMhs = new mhs();
-        $dataMhs->nim = '2307059';
-        $dataMhs->nama = 'Anggi Maulana';
+        $dataMhs->nim = '2307067';
+        $dataMhs->nama = 'Hafiz Surya Wijaya';
         $dataMhs->prodi = 'D4 Sistem Informasi Kota Cerdas';
         $dataMhs->angkatan = '2023';
         $dataMhs->created_at = now();
@@ -43,14 +43,14 @@ class mahasiswaController extends Controller
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            [
-                'nim' => '2307072',
-                'nama' => 'Malik',
-                'prodi' => 'D4 Sistem Informasi Kota Cerdas',
-                'angkatan' => '2023',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ]
+            // [
+            //     'nim' => '2307072',
+            //     'nama' => 'Malik',
+            //     'prodi' => 'D4 Sistem Informasi Kota Cerdas',
+            //     'angkatan' => '2023',
+            //     'created_at' => now(),
+            //     'updated_at' => now(),
+            // ]
             ));
 
         echo "Data mahasiswa berhasil ditambahkan, <a href='/mahasiswa'>kembali</a>";
@@ -65,7 +65,7 @@ class mahasiswaController extends Controller
     }
 
     public function destroy() {
-        mhs::where('nim', '=', '2307061')->delete();
+        mhs::where('nim', '=', '2307065')->delete();
         echo "Data mahasiswa berhasil dihapus, <a href='/mahasiswa'>kembali</a>";
     }
 }
